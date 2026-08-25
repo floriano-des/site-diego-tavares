@@ -1147,16 +1147,29 @@ h3 {
   gap: 9px;
 }
 
-.social-links span {
+.social-links .social-icon {
   display: grid;
   width: 28px;
   height: 28px;
+  flex: 0 0 28px;
   place-items: center;
   color: var(--blue);
   background: var(--white);
   border-radius: 50%;
-  font-size: 0.62rem;
-  font-weight: 900;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.social-links .social-icon svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.social-links a:hover .social-icon,
+.social-links a:focus-visible .social-icon {
+  color: var(--white);
+  background: var(--orange);
 }
 
 .legal-bar {
