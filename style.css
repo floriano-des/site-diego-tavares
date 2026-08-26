@@ -379,19 +379,30 @@ h3 {
 }
 
 .hero h1 {
-  max-width: 600px;
+  max-width: 670px;
   margin-bottom: 18px;
-  font-size: clamp(3.2rem, 5.25vw, 5.4rem);
+  font-size: clamp(2.2rem, 3.55vw, 3.35rem);
+  letter-spacing: -0.045em;
+  line-height: 0.98;
   text-transform: uppercase;
 }
 
+.hero h1 span,
 .hero h1 em {
   display: block;
+}
+
+.hero h1 em {
   color: var(--orange);
   font-style: normal;
 }
 
 @media (min-width: 901px) {
+  .hero .campaign-label,
+  .hero .hero-branding {
+    display: none;
+  }
+
   .hero h1 em {
     text-shadow:
       0 0 10px rgba(255, 255, 255, 0.15),
@@ -458,8 +469,8 @@ h3 {
   z-index: 2;
   right: -2%;
   bottom: 0;
-  width: min(610px, 98%);
-  max-height: 94%;
+  width: min(840px, 136%);
+  max-height: 100%;
   object-fit: contain;
   object-position: bottom;
   filter: drop-shadow(0 24px 30px rgba(4, 11, 58, 0.27));
@@ -469,7 +480,7 @@ h3 {
   position: absolute;
   z-index: 3;
   top: 11%;
-  right: 0;
+  right: -4%;
   width: 165px;
   height: auto;
   animation: stamp-float 6s ease-in-out infinite;
@@ -1436,20 +1447,19 @@ h3 {
 
   .hero-mobile-photo {
     position: absolute;
-    right: -4%;
-    bottom: -18%;
-    width: 108%;
+    right: 0;
+    bottom: 0;
+    width: 100%;
     max-width: none;
-    border-radius: 50%;
     filter: drop-shadow(0 18px 24px rgba(4, 11, 58, 0.25));
   }
 
   .hero-mobile-stamp {
     position: absolute;
     z-index: 2;
-    top: 5%;
-    right: 0;
-    width: 82px;
+    bottom: 2%;
+    left: -24px;
+    width: 76px;
   }
 
   .hero h1 {
@@ -1537,29 +1547,45 @@ h3 {
   }
 
   .hero-branding {
-    grid-template-columns: minmax(0, 1.12fr) minmax(150px, 0.8fr);
-    gap: 4px;
-    margin-bottom: 14px;
+    display: flex;
+    width: min(420px, 100%);
+    max-width: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto 22px;
+  }
+
+  .hero-logo {
+    order: 2;
+    width: min(340px, 88%);
   }
 
   .hero-mobile-visual {
-    height: 210px;
+    order: 1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 480 / 434;
+    overflow: visible;
   }
 
   .hero-mobile-photo {
-    right: -10%;
-    bottom: -15%;
-    width: 120%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .hero-mobile-stamp {
-    top: 2%;
-    right: -2%;
-    width: 68px;
+    top: 4%;
+    right: -4px;
+    bottom: auto;
+    left: auto;
+    width: 78px;
   }
 
   .hero h1 {
-    font-size: clamp(2.7rem, 11.8vw, 4.5rem);
+    font-size: clamp(2rem, 8.4vw, 3.35rem);
   }
 
   .about-photo-wrap {
@@ -1651,21 +1677,26 @@ h3 {
   }
 
   .hero-branding {
-    grid-template-columns: minmax(0, 1.16fr) minmax(132px, 0.84fr);
+    width: 100%;
   }
 
   .hero-mobile-visual {
-    height: 190px;
+    height: auto;
+    aspect-ratio: 480 / 434;
   }
 
   .hero-mobile-photo {
-    right: -14%;
-    bottom: -13%;
-    width: 128%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .hero-mobile-stamp {
-    width: 62px;
+    top: 4%;
+    right: -2px;
+    bottom: auto;
+    left: auto;
+    width: 70px;
   }
 
   .about-photo-wrap {
